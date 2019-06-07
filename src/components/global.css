@@ -1,0 +1,480 @@
+html, body {
+	color: black;
+	font-family: Tahoma, sans-serif;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+  background-color: #E7E8E9;
+}
+select, input {
+  color: #676767;
+}
+.platno {
+  width: 970px;
+  background-color: white;
+  margin: 0px auto;
+}
+h1 {
+  border-bottom: solid 2px #006385;
+  color: #006385;
+  font: 32px Helvetica,Arial,sans-serif;
+  font-weight: 300;
+}
+h1 a {
+  float: right;
+}
+/****** GLAVA *****/
+header {
+  background-color: white;
+}
+header A:link, header A:visited, header A:hover, header A:active {
+  color: #0072BC;
+  text-decoration: none !important;
+}
+#zgornjiDelGlave {
+  margin: 0px 30px;
+  height: 96px;
+}
+#logo {
+  float: left;
+}
+#topMenu {
+  float: right;
+  color: #0072BC;
+  font-size: 12px;
+  text-align: right;
+  margin: 10px 0px 0px 0px;
+  width: 225px;
+}
+.iskalnoPolje {
+  border: solid 1px #ABADB3;
+  height: 19px;
+  margin: 4px 0px 4px 0px;
+}
+#hitriIskalnik {
+  font: 11px Helvetica, Arial, sans-serif;
+  color: #4c4c4c;/*#8A8A8A;*/
+  padding: 0px;
+  padding-top: 2px;
+  margin: 0px;
+  border: none;
+  width: 200px;
+  float:left;
+}
+.iskalnoPolje img {
+  float: right;
+}
+#iskaniVir {
+  width: 225px;
+  font: 11px Helvetica, Arial, sans-serif;
+  color: #4c4c4c;/*#8A8A8A;*/
+  height: 19px;
+  vertical-align: middle;
+  border: solid 1px #ABADB3;
+}
+/***** MENU POD GLAVO *****/
+nav {
+  background-color: #D2D4D5;
+  display: table;
+  width: 100%;
+  height: 33px;
+  border-bottom: solid 3px #006385;
+}
+
+nav a {  
+  display: table-cell;
+  padding: auto;
+  color: #58595B !important;
+  font: 15px Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: #006385;
+  color: white !important;
+}
+
+
+div.teloVsebine a {
+   color: #005e9d;
+}
+
+.pot ul.breadcrumb {
+  display:inline;
+  list-style-type:none;
+  padding-left: 0px;
+}
+.pot ul.breadcrumb li {
+  display:inline;
+}
+.pot span {
+  font: 17px Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/***** POT *****/
+.pot {
+  border-bottom: solid 2px #58595B;
+  padding-bottom: 3px;
+  margin-top: 20px;
+}
+.pot a, .pot a:visited, .pot a:active, .pot a:link {
+  font: 17px Helvetica, Arial, sans-serif;
+  font-weight: 400px;
+  color: #58595B;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.breadcrumb .divider {
+  font: 14px Helvetica, Arial, sans-serif;
+  color: #676767;
+}
+
+.breadcrumb a.pathway-last, .breadcrumb a.pathway-last:visited{
+  /*color: #D2D5D7;*/
+  color: #70787e;
+}
+
+.element-invisible {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color: #006385;
+  z-index: 10;
+  width: 200px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.47);
+}
+div.nav-submenu a {
+  text-align: left;
+  padding: 2px 0px 2px 15px;
+  display: block;
+  color: white !important;
+  margin: 5px;
+  text-transform: none;
+}
+div.nav-submenu a:hover {
+  text-decoration: underline !important;
+}
+
+/***** FOOTER SITE MAP *****/
+.customfootersitemap {
+  border-top: solid 2px #006A8F;
+  margin-top: 20px;
+}
+
+/*skrij povezavo "Domov" v meniju*/
+
+#FooterSiteMap {
+  /*border-top: solid 2px #006A8F;
+  margin-top: 20px;*/
+}
+#FooterSiteMap table {
+  width: 100%;
+  margin: 0px 20px 20px 40px;
+}
+#FooterSiteMap td {
+  vertical-align: top;
+}
+#FooterSiteMap h3 {
+  font: 13px Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #676767;
+}
+.SiteMapList {
+  margin: 0px;
+  padding-left: 20px;
+}
+.SiteMapList LI {
+  /*list-style-image: url('/dkum/info/slike/bullet.gif');*/
+  color: #0072BC;
+  font-size: 12px;
+  line-height: 18px;
+}
+.SiteMapList A {
+  text-decoration: none;
+}
+/***** NOGA *****/
+footer {
+  margin-top: 20px;
+  height: 60px;
+  background-color: #006A8F;
+  border-top: solid 1px #006A8F;
+}
+footer div {
+  margin: 20px 20px 0px 20px;
+  color: white;
+  font: 12px Helvetica, Arial, sans-serif;
+}
+footer .prijava {
+  float: right;
+}
+footer A:link, footer A:visited, footer A:hover, footer A:active {
+  color: white;
+  text-decoration: none;
+}
+/***** *****/
+P {
+  text-align: justify;
+}
+A:link, A:visited, A:hover, A:active {
+	color: #0072BC;
+}
+
+
+.Vsebina {
+	padding: 0px 30px;
+  margin-bottom: 3em;
+	font: 14px Helvetica, Arial, sans-serif;
+	/*color: #676767;*/
+        color: #4c4c4c;
+}
+.Vsebina P, .Vsebina TABLE, .Vsebina UL, .Vsebina P, SPAN {
+	font: 14px Helvetica, Arial, sans-serif;
+	/*color: #676767;*/
+        color: #4c4c4c;
+}
+FORM {
+	margin: 0px;
+	padding: 0px;
+}
+
+IMG {
+	border: none;
+}
+
+/***** ORGSTAT *****/
+TABLE.OrgStat {
+  border: solid 1px silver;
+  border-collapse: collapse;
+  width: 100%;
+}
+.OrgStat TD, .OrgStat TH {
+  border: solid 1px silver;
+}
+.OrgStat TR.alt TD {
+  background-color: #EEEEEE;
+}
+.OrgStat TD {
+  text-align: center;
+  padding-right: 6px;
+}
+.OrgStat TR.Sum TD {
+  border-top: double 3px silver;
+}
+.OrgStat TR:hover TD {
+  background-color: #CECECE;
+}
+.OrgStat TD.naziv {
+  text-align: left;
+  padding-left: 2px;
+}
+.OrgStat TH.sub {
+  width: 50px;
+  font-size: 10px;
+}
+.OrgStatUpdated {
+  color: #737373;/*silver;*/
+}
+.OrgStat TD A {
+  color: #024364;
+  text-decoration: none;
+}
+.OrgStat TD.Search {
+  /* background-image: url('../img/Lupa.gif'); */
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  cursor: pointer;
+}
+.OrgStat TD.Rss {
+  /* background-image: url('../img/rss.gif'); */
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  cursor: pointer;
+}
+.OrgStat TD.True {
+  background-color: #AFA;
+}
+.OrgStat TD.False {
+  background-color: #FAA;
+}
+.OrgStat CAPTION {
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.RssLink {
+  color: #024364;
+}
+
+/***** ShortStat *****/
+.ShortStat {
+  border: solid 1px silver;
+  border-collapse: collapse;
+}
+.ShortStat THEAD TH {
+  border: solid 1px silver;
+  vertical-align: bottom;
+  padding: 0px 4px;
+  font-weight: bold;
+  text-align: center;
+}
+.ShortStat TH {
+  font-weight: normal;
+  border: solid 1px silver;
+  text-align: right;
+}
+.ShortStat TD {
+  text-align: center;
+  border: solid 1px silver;
+}
+.ShortStat .Empty {
+  border-top: solid 1px white;
+  border-left: solid 1px white;
+}
+
+/****/
+nav a.prijavaNi {
+   width: 150px;
+}
+nav a.prijavaJe {
+  width: 150px;
+  background-color: #009522;
+  color: white !important;
+  font-weight: bold;
+  white-space: nowrap;
+	overflow: hidden;
+  text-overflow: ellipsis;
+}
+/***** NovaGradiva *****/
+.NovaGradiva {
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
+  border-collapse: collapse;
+}
+.NovaGradiva td {
+  vertical-align: top;
+}
+.NovaGradiva .alt {
+  background-color: #EEEEEE;
+}
+.NovaGradiva tr:hover td {
+  background-color: #CECECE;
+}
+.NovaGradiva .c1 { width: 80px; }
+.NovaGradiva .c2 { width: 40px; }
+.NovaGradiva .c3 { width: 40px; }
+.NovaGradiva .c4 {
+  text-overflow: ellipsis;
+  display: block;
+}
+.NovaGradiva .c4 a {
+    color: #004c7e;
+}
+
+/** cookie table **/
+.cookieTable {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+  border: none;
+}
+.cookieTable th {
+	text-align: left;
+	padding: 6px;
+	background-color: #cccccc;
+}
+.cookieTable td {
+	padding: 6px;
+	background-color: #eeeeee;
+  vertical-align: top;
+}
+/** cookie **/
+#eucookielaw {
+  background: none repeat scroll 0 0 rgba(86, 86, 86, 0.95);
+  color: #FFFFFF;
+  font: 13px Verdana, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+  width: 100%;
+  line-height: 3em;
+}
+#eucookielaw a {
+  color: white;
+}
+.eucookielaw-accept {
+  background: none repeat scroll 0 0 #7DAF3B;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  margin: 0px 5px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+  transition: background 0.25s ease-in 0s;
+}
+.eucookielaw-accept:hover {
+  background-color: black;
+}
+
+img#hitroIskanjeLupa:hover{
+  cursor: pointer;}
+.Partnerji {
+  border-top: solid 1px silver;
+}
+.koda {
+  background-color: #e0e0e0;
+  display: block;
+  font-family: Courier New;
+  font-size: 12px;
+  padding: 2px;
+  color: #333;
+}
+/***** noscript *****/
+.NoScript {
+	background-color: red;
+	color: white;
+	padding: 20px 25%;
+	padding-bottom: 20px;
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+}
+.NoScript H1  {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0px;
+  color: white;
+  border-bottom-color: white;
+}
+.NoScript {
+  color: white;
+  background-color: #EE8800;
+  text-shadow: 1px 1px 1px #111;
+}
+.NoScript H1 {
+  color: white;
+  border-bottom: none;
+  text-shadow: 1px 1px 1px #111;
+}
+
+.LibList {
+	/* list-style-image: url('../../../slike/arrow2.gif'); */
+}
+
