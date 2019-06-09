@@ -4,7 +4,7 @@ import Layout from "../../components/Layout"
 
 const IndexPage = () => (
   <Layout>
-          <p></p>
+          {/* <p></p>
           <div id="accordion1"
             class="accordionfaq lightnessfaq headerbackground headerborder contentbackground contentborder round5 faq-accordion selected"
             style="display: block; clear: both;">
@@ -146,7 +146,7 @@ const IndexPage = () => (
                 Med vikendi in prazniki se na e-pošto ne odgovarja.</p>
             </div>
           </div>
-          <p></p>
+          <p></p> */}
   </Layout>
 )
 

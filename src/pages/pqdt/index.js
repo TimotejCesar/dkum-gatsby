@@ -3,7 +3,7 @@ import Layout from "../../components/Layout"
 
 const IndexPage = () => (
   <Layout>
-    <p style="text-align: justify;">S študijskim letom 2012/2013 so na
+    {/* <p style="text-align: justify;">S študijskim letom 2012/2013 so na
               Univerzi v Mariboru uvedli oddajo doktorskih del Univerze v Mariboru
               tudi v ProQuestovo mednarodno bibliografsko bazo Dissertations and
               Theses. Tako se Univerza v Mariboru uvršča v skupino univerz, ki
@@ -25,7 +25,7 @@ const IndexPage = () => (
               in javno objavo doktorske disertacije v podatkovno zbirko ProQuest
               Dissertations &amp; Theses Global<br/>(<a
                 href="http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf">http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf</a>).
-            </p>
+            </p> */}
   </Layout>
 )
 
