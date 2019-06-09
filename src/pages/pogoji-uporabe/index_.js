@@ -3,25 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/Layout"
 
 const IndexPage = () => (
-  <Layout>
-    <section class="Vsebina">
-        <div class="pot">
-            <ul class="breadcrumb">
-                <li>
-                    <a href="https://dk.um.si/info/index.php/slo/" class="pathway">Prva stran</a>
-                    <span class="divider"> &gt; </span>
-                </li>
-                <li>
-                    <a href="https://dk.um.si/info/index.php/slo/uvodnik" class="pathway pathway-last">Uvodnik</a>
-                </li>
-            </ul>
-        </div>
-        <div class="teloVsebine">
-            <div class="item-page">
-            <div class="page-header">
-                <h1>Uvodnik</h1>
-            </div>
-            
+  <Layout>     
             <div class="moz-text-html" lang="x-central-euro">
             <h2>Pogoji uporabe metapodatkov</h2>
             za podatke, ki opisujejo zapise v repozitoriju
@@ -132,9 +114,6 @@ const IndexPage = () => (
                 prenese na drug primeren arhiv.</li>
             </ol>
           </div>
-        </div>
-        </div>
-    </section>
   </Layout>
 )
 

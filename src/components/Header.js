@@ -140,69 +140,95 @@ const Header = ({ siteTitle }) => {
   ]
 
   return (
-  <header>       
-        <div id="zgornjiDelGlave">
-          <div id="logo">
-            <Link href="/" title="Pojdi na prvo stran DKUM">
-              <img src={um_logo} alt="Logotip UM"/>
-            </Link>
-          </div>
+    <header>
+      <div id="zgornjiDelGlave">
+        <div id="logo">
+          <Link href="/" title="Pojdi na prvo stran DKUM">
+            <img src={um_logo} alt="Logotip UM" />
+          </Link>
+        </div>
 
-          <div id="topMenu">
-            <div className="custom">
-              <div>
-                <a href="https://dk.um.si/info/index.php/slo">SLO</a> | 
-                <a href="https://dk.um.si/info/index.php/eng">ENG</a> | 
-                <a href="https://dk.um.si/cookies.php">Piškotki in zasebnost</a>
-              </div>
-              <div className="iskalnoPolje">
-                <input id="hitriIskalnik" onKeyDown={(event) => HitroIskanje_onKeyDown(event, 'slv')}
-                      onFocus={(event) => HitroIskanje_onFocus(event)} onBlur={(event) => HitroIskanje_onBlur(event)} type="text"
-                      value="ISKANJE PO KATALOGU" title="Iskanje po katalogu"/>
-                <img src={looking_glass} id="hitroIskanjeLupa"
-                    onclick={(event) => HitroIskanje_OnLupaClick(event, 'slv')} alt="Lupa" title="Išči"/>
-              </div>
+        <div id="topMenu">
+          <div className="custom">
+            <div>
+              <a href="https://dk.um.si/info/index.php/slo">SLO</a> |
+              <a href="https://dk.um.si/info/index.php/eng">ENG</a> |
+              <a href="https://dk.um.si/cookies.php">Piškotki in zasebnost</a>
+            </div>
+            <div className="iskalnoPolje">
+              <input
+                id="hitriIskalnik"
+                onKeyDown={event => HitroIskanje_onKeyDown(event, "slv")}
+                onFocus={event => HitroIskanje_onFocus(event)}
+                onBlur={event => HitroIskanje_onBlur(event)}
+                type="text"
+                value="ISKANJE PO KATALOGU"
+                title="Iskanje po katalogu"
+              />
+              <img
+                src={looking_glass}
+                id="hitroIskanjeLupa"
+                onclick={event => HitroIskanje_OnLupaClick(event, "slv")}
+                alt="Lupa"
+                title="Išči"
+              />
+            </div>
 
-              <select id="iskaniVir" title="Vir iskanja">
-                {
-                  dropdownOptions.map(option => (
-                    <option className={option.className} value={option.value} selected={option.selected}>&nbsp;&nbsp;&nbsp;&nbsp;{option.label}</option>
-                  ))
-                }
-              </select>
+            <select id="iskaniVir" title="Vir iskanja">
+              {dropdownOptions.map(option => (
+                <option
+                  className={option.className}
+                  value={option.value}
+                  selected={option.selected}
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;{option.label}
+                </option>
+              ))}
+            </select>
 
             {/* TO DO: IMPLEMENT TEXT SIZER */}
             <div>
-              <a onClick={ts('Vsebina', 1)} href="#" title="Povečaj velikost besedila">Večja pisava</a> | 
-              <a onClick={ts('Vsebina', -1)} href="#" title="Zmanjšaj velikost besedila">Manjša pisava</a>
+              <a
+                onClick={ts("Vsebina", 1)}
+                href="#"
+                title="Povečaj velikost besedila"
+              >
+                Večja pisava
+              </a>{" "}
+              |
+              <a
+                onClick={ts("Vsebina", -1)}
+                href="#"
+                title="Zmanjšaj velikost besedila"
+              >
+                Manjša pisava
+              </a>
             </div>
           </div>
-
         </div>
-
       </div>
       <nav>
-      <Link to='/slo/uvodnik'>
-        Uvodnik
-      </Link>
-      <a href='https://dk.um.si/Iskanje.php?lang=slv'>
-        Iskanje
-      </a>
-      <a href='https://dk.um.si/Brskanje.php?lang=slv'>
-        Brskanje
-      </a>
-      <Link className="idOddajaDela" to='/slo/uvodnik'>
-        <div className="nav-submenu">
-          <a href="https://dk.um.si/info/index.php/slo/oddaja-dela">Za študente</a>
-          <a href="https://dk.um.si/info/index.php/slo/oddaja-dela-za-zaposlene">Za zaposlene</a>
-        </div>
-      </Link>
+        <Link to="/slo/uvodnik">Uvodnik</Link>
+        <a href="https://dk.um.si/Iskanje.php?lang=slv">Iskanje</a>
+        <a href="https://dk.um.si/Brskanje.php?lang=slv">Brskanje</a>
+        <Link className="idOddajaDela" to="/slo/uvodnik">
+          Oddaja dela
+          <div className="nav-submenu">
+            <a href="https://dk.um.si/info/index.php/slo/oddaja-dela">
+              Za študente
+            </a>
+            <a href="https://dk.um.si/info/index.php/slo/oddaja-dela-za-zaposlene">
+              Za zaposlene
+            </a>
+          </div>
+        </Link>
         <a href="https://dk.um.si/Statistika.php?lang=slv">Statistika</a>
-        <a className="prijavaNi" href="https://dk.um.si/Prijava.php?lang=slv">Prijava</a>
+        <a className="prijavaNi" href="https://dk.um.si/Prijava.php?lang=slv">
+          Prijava
+        </a>
       </nav>
-
-  </header>
-  )
+    </header>
+  );
 }
 
 Header.propTypes = {
