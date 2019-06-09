@@ -179,7 +179,7 @@ const Header = ({ siteTitle }) => {
                 <option
                   className={option.className}
                   value={option.value}
-                  key={Option.value}
+                  key={option.value}
                 >
                   &nbsp;&nbsp;&nbsp;&nbsp;{option.label}
                 </option>
