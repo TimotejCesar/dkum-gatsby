@@ -1,6 +1,6 @@
 ---
 templateKey: content-page
-title: Oddaja dela za zaposlene
+title: Oddaja dela za študente
 ---
 
 Če želite oddati diplomsko, magistrsko ali doktorsko nalogo,
@@ -23,18 +23,19 @@ V sporočilu obvezno navedite ID študenta (ne vpisne številke).
 *Po tem roku oddaja dela za študente ni več možna. V takem primeru upoštevajte navodila referata vaše fakultete.
         
 Priloge:
-
-        <p><img src="../img/html.gif" width="16" height="16" /> <a
-            href="http://libguides.ukm.um.si/dkum" target="_blank">Vodič oddaje zaključnega dela</a><br /><img
-                src="DKUM%20-%20Oddaja%20dela_files/pdf.gif" width="16" height="16" /> <a
-                    href="https://dk.um.si/info/images/docs/Navodila.za.pretvorbo.MS.Word.dokumentov.v.PDF.pdf"
-                    target="_blank">Navodila za pretvorbo MS Word dokumentov v PDF</a><br /><img
-                src="DKUM%20-%20Oddaja%20dela_files/doc.gif" width="16" height="16" /> <a
-                    href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_170105.docx" target="_blank">Prazna
-              izjava o istovetnosti - dodiplomski študij / 1. stopnja</a><br /><img
-                src="DKUM%20-%20Oddaja%20dela_files/doc.gif" width="16" height="16" /> <a
-                    href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_170105.docx" target="_blank">Prazna
-              izjava o istovetnosti - magistrski študij / 2. stopnja</a><br /><img
-                src="DKUM%20-%20Oddaja%20dela_files/doc.gif" width="16" height="16" /> <a
-                    href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_dr_180524.docx"
-                    target="_blank">Prazna izjava o istovetnosti - doktorski študij / 3. stopnja</a></p>
+<p>
+    <img src="../../img/html.gif" width="16" height="16" /> 
+    <a href="http://libguides.ukm.um.si/dkum" target="_blank">Vodič oddaje zaključnega dela</a><br />
+    <img src="../../img/pdf.gif" width="16" height="16" /> 
+    <a href="https://dk.um.si/info/images/docs/Navodila.za.pretvorbo.MS.Word.dokumentov.v.PDF.pdf" 
+        target="_blank">Navodila za pretvorbo MS Word dokumentov v PDF</a><br />
+    <img src="../../img/doc.gif" width="16" height="16" />
+    <a href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_170105.docx" target="_blank">
+    Prazna izjava o istovetnosti - dodiplomski študij / 1. stopnja</a><br />
+    <img src="../../img/doc.gif" width="16" height="16" />
+    <a href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_170105.docx" target="_blank">
+    Prazna izjava o istovetnosti - magistrski študij / 2. stopnja</a><br />
+    <img src="../../img/doc.gif" width="16" height="16" />
+    <a href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_dr_180524.docx"
+        target="_blank">Prazna izjava o istovetnosti - doktorski študij / 3. stopnja</a>
+</p>

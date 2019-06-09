@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../../components/Layout"
 
 const IndexPage = () => (
   <Layout>     
-            <div class="moz-text-html" lang="x-central-euro">
+            <div className="moz-text-html" lang="x-central-euro">
             <h2>Pogoji uporabe metapodatkov</h2>
             za podatke, ki opisujejo zapise v repozitoriju
             <ol>

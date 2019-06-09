@@ -105,7 +105,7 @@ const Header = ({ siteTitle }) => {
   }
 
   const dropdownOptions = [
-    { value:"dk", selected: true, label: "DKUM"},
+    { value:"dk", label: "DKUM"},
     { value:"2", label: "EPF - Ekonomsko-poslovna fakulteta"},
     { value:"19", label: "FE - Fakulteta za energetiko"},
     { value:"3", label: "FERI - Fakulteta za elektrotehniko, računalništvo in informatiko"},
@@ -174,12 +174,12 @@ const Header = ({ siteTitle }) => {
               />
             </div>
 
-            <select id="iskaniVir" title="Vir iskanja">
+            <select id="iskaniVir" value={dropdownOptions[0].value} title="Vir iskanja">
               {dropdownOptions.map(option => (
                 <option
                   className={option.className}
                   value={option.value}
-                  selected={option.selected}
+                  key={Option.value}
                 >
                   &nbsp;&nbsp;&nbsp;&nbsp;{option.label}
                 </option>

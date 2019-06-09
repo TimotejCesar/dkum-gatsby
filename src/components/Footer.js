@@ -7,7 +7,7 @@ const Footer = class extends React.Component {
         <div>
 					Digitalna knjižnica Univerze v Mariboru |
 			    <a href="mailto:dkum@um.si">dkum@um.si</a>
-          <a class="prijava" href="https://dk.um.si/prijava.php?mode=">Prijava za skrbnike</a>
+          <a className="prijava" href="https://dk.um.si/prijava.php?mode=">Prijava za skrbnike</a>
         </div>
       </footer>
     )

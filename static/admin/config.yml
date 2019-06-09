@@ -50,13 +50,6 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/api/index.md"
-        label: "API"
-        name: "api"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/uvodnik/index.md"
         label: "Uvodnik"
         name: "uvodnik"
@@ -74,6 +67,13 @@ collections:
       - file: "src/pages/pogoji-uporabe/index.md"
         label: "Pogoji uporabe"
         name: "pogoji-uporabe"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/api/index.md"
+        label: "API"
+        name: "api"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}

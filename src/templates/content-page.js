@@ -8,21 +8,21 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section class="Vsebina">
-        <div class="pot">
-            <ul class="breadcrumb">
+    <section className="Vsebina">
+        <div className="pot">
+            <ul className="breadcrumb">
                 <li>
-                    <a href="https://dk.um.si/info/index.php/slo/" class="pathway">Prva stran</a>
-                    <span class="divider"> &gt; </span>
+                    <a href="https://dk.um.si/info/index.php/slo/" className="pathway">Prva stran</a>
+                    <span className="divider"> &gt; </span>
                 </li>
                 <li>
-                    <a href="https://dk.um.si/info/index.php/slo/uvodnik" class="pathway pathway-last">{title}</a>
+                    <a href="https://dk.um.si/info/index.php/slo/uvodnik" className="pathway pathway-last">{title}</a>
                 </li>
             </ul>
           </div>
-          <div class="teloVsebine">
-            <div class="item-page">
-              <div class="page-header">
+          <div className="teloVsebine">
+            <div className="item-page">
+              <div className="page-header">
                 <h1>{title}</h1>
               </div>
               <PageContent content={content} />

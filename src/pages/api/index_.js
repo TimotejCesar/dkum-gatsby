@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../../components/Layout"
 
 const IndexPage = () => (
@@ -43,7 +42,7 @@ const IndexPage = () => (
             dosegljiva.</p>
         <p>3. Na poljubno lokacijo v vsebini spletne strani dodamo element, v katerem želimo izpis aplikacije. Npr.:
           </p>
-        <pre class="koda">&lt;div id="dkWebApp"&gt;&lt;/div&gt; </pre>
+        <pre className="koda">&lt;div id="dkWebApp"&gt;&lt;/div&gt; </pre>
         <p>4. V spletno stran prilepimo naslednjo JavaScript kodo, ki sproži delovanje aplikacije:</p>
         <pre className="koda">
             &lt;script type="text/javascript"&gt;
