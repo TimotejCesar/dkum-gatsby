@@ -11,3 +11,4 @@ strani.
 Kot prijavljeni uporabnik imate pod osebnim profilom možnost vnosa
 povezav do vašega osebnega profila drugih spletnih repozitorijev in
 podatkovnih zbirk, kot so COBISS, ARRS, GoogleScholar, ResearchGate itd.
+Vnesene povezave se izpišejo v bibliografiji mentorja.
