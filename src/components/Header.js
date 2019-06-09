@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => {
   * @param string niz Vir iskanja.
   * @param string langCode Jezik. Možnosti "slv" ali "eng".  
   */
-  function HitroIskanje_Sprozi(niz, vir, langCode) {
+  //function HitroIskanje_Sprozi(niz, vir, langCode) {
     // if(vir == 'cobiss') {
     //     alert(prevedi('izberiteCobissVir'));
     //     return;
@@ -85,7 +85,7 @@ const Header = ({ siteTitle }) => {
     //       "../../../Iskanje.php?type=enostavno&niz=" + niz + "&vir="+ vir + "&lang=" + langCode
     //     );
     //   }
-  }
+  //}
 
   function HitroIskanje_onFocus(e) {
     // if(e.target.value == prevedi('hitroIskanje')) {
@@ -173,8 +173,8 @@ const Header = ({ siteTitle }) => {
 
             {/* TO DO: IMPLEMENT TEXT SIZER */}
             <div>
-              <a onClick={ts('Vsebina', 1)} title="Povečaj velikost besedila">Večja pisava</a> | 
-              <a onClick={ts('Vsebina', -1)} title="Zmanjšaj velikost besedila">Manjša pisava</a>
+              <a onClick={ts('Vsebina', 1)} href="#" title="Povečaj velikost besedila">Večja pisava</a> | 
+              <a onClick={ts('Vsebina', -1)} href="#" title="Zmanjšaj velikost besedila">Manjša pisava</a>
             </div>
           </div>
 
