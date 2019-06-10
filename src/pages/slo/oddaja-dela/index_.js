@@ -1,9 +1,9 @@
-// import React from "react"
-// import Layout from "../../components/Layout"
+import React from "react"
+import Layout from "../../../components/Layout"
 
-// const IndexPage = () => (
-//     <Layout>
-//         {/* <p style="line-height: 15.8079996109009px;"></p>
+const IndexPage = () => (
+    <Layout>
+           {/* <p style="line-height: 15.8079996109009px;"></p>
 //         <p style="line-height: 15.8079996109009px;">Če želite oddati diplomsko, magistrsko ali doktorsko nalogo,
 //             se&nbsp;<a href="https://dk.um.si/prijava.php"
 //                 style="padding: 1px 2px; background-color: #dedede;">prijavite</a>&nbsp;v
@@ -46,7 +46,7 @@
 //                 src="DKUM%20-%20Oddaja%20dela_files/doc.gif" width="16" height="16" /> <a
 //                     href="https://dk.um.si/doc/izjave/izjava.o.avtorstvu.in.istovetnosti_dr_180524.docx"
 //                     target="_blank">Prazna izjava o istovetnosti - doktorski študij / 3. stopnja</a></p> */}
-//     </Layout>
-// )
+    </Layout>
+)
 
-// export default IndexPage
+export default IndexPage
