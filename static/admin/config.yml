@@ -65,7 +65,14 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-    - name: "pages-eng"
+      - file: "src/pages/slo/knjiznice-um/index.md"
+        label: "API"
+        name: "api"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages-eng"
     label: "Pages ENG"
     files:
       - file: "src/pages/eng/index.md"
@@ -118,6 +125,13 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/api/index.md"
+        label: "API"
+        name: "api"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/knjiznice-um/index.md"
         label: "API"
         name: "api"
         fields:
