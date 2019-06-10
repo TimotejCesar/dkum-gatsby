@@ -9,69 +9,115 @@ collections:
   - name: "pages-slo"
     label: "Pages SLO"
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: "src/pages/slo/index.md"
+        label: "Prva stran"
+        name: "prva-stran"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/oddaja-dela-za-zaposlene/index.md"
+      - file: "src/pages/slo/oddaja-dela-za-zaposlene/index.md"
         label: "Oddaja dela za zaposlene"
         name: "oddaja-dela-za-zaposlene"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/oddaja-dela/index.md"
+      - file: "src/pages/slo/oddaja-dela/index.md"
         label: "Oddaja dela"
         name: "oddaja-dela"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/faq/index.md"
+      - file: "src/pages/slo/faq/index.md"
         label: "FAQ"
         name: "faq"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/uvodnik/index.md"
+      - file: "src/pages/slo/uvodnik/index.md"
         label: "Uvodnik"
         name: "uvodnik"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/pqdt/index.md"
+      - file: "src/pages/slo/pqdt/index.md"
         label: "Pqdt"
         name: "pqdt"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/pogoji-uporabe/index.md"
+      - file: "src/pages/slo/pogoji-uporabe/index.md"
         label: "Pogoji uporabe"
         name: "pogoji-uporabe"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/api/index.md"
+      - file: "src/pages/slo/api/index.md"
+        label: "API"
+        name: "api"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+    - name: "pages-eng"
+    label: "Pages ENG"
+    files:
+      - file: "src/pages/eng/index.md"
+        label: "Prva stran"
+        name: "prva-stran"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/oddaja-dela-za-zaposlene/index.md"
+        label: "Oddaja dela za zaposlene"
+        name: "oddaja-dela-za-zaposlene"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/oddaja-dela/index.md"
+        label: "Oddaja dela"
+        name: "oddaja-dela"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/faq/index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/uvodnik/index.md"
+        label: "Uvodnik"
+        name: "uvodnik"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/pqdt/index.md"
+        label: "Pqdt"
+        name: "pqdt"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/pogoji-uporabe/index.md"
+        label: "Pogoji uporabe"
+        name: "pogoji-uporabe"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/eng/api/index.md"
         label: "API"
         name: "api"
         fields:
