@@ -129,6 +129,13 @@ div.teloVsebine a {
   text-transform: uppercase;
 }
 
+.as-link {
+  color: #0072BC;
+  text-decoration: none !important;
+  font-size: 12px;
+  font-family: Tahoma, sans-serif;
+  cursor: pointer;
+}
 
 .breadcrumb .divider {
   font: 14px Helvetica, Arial, sans-serif;
@@ -159,6 +166,9 @@ div.teloVsebine a {
   z-index: 10;
   width: 200px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.47);
+}
+.nav-submenu.show {
+  display: block;
 }
 div.nav-submenu a {
   text-align: left;
@@ -478,3 +488,19 @@ img#hitroIskanjeLupa:hover{
 	/* list-style-image: url('../../../slike/arrow2.gif'); */
 }
 
+.idOddajaDela {
+  cursor: pointer;
+  display: table-cell;
+  padding: auto;
+  color: #58595B !important;
+  font: 15px Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+
+.idOddajaDela:hover {
+  background-color: #006385;
+  color: white !important;
+}

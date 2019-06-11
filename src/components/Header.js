@@ -4,7 +4,49 @@ import React from "react"
 import um_logo from "../img/logotip_um2.png"
 import looking_glass from "../img/gosearch15.png"
 
-const Header = ({ siteTitle }) => {
+class Header extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      showSubmenu: false,
+      dropdownOptions : [
+        { value:"dk", label: "DKUM"},
+        { value:"2", label: "    EPF - Ekonomsko-poslovna fakulteta"},
+        { value:"19", label: "    FE - Fakulteta za energetiko"},
+        { value:"3", label: "    FERI - Fakulteta za elektrotehniko, računalništvo in informatiko"},
+        { value:"9", label: "    FF - Filozofska fakulteta"},
+        { value:"5", label: "    FGPA - Fakulteta za gradbeništvo, prometno inženirstvo in arhitekturo"},
+        { value:"13", label: "    FKBV - Fakulteta za kmetijstvo in biosistemske vede"},
+        { value:"6", label: "    FKKT - Fakulteta za kemijo in kemijsko tehnologijo"},
+        { value:"16", label: "    FL - Fakulteta za logistiko"},
+        { value:"11", label: "    FNM - Fakulteta za naravoslovje in matematiko"},
+        { value:"8", label: "    FOV - Fakulteta za organizacijske vede"},
+        { value:"7", label: "    FS - Fakulteta za strojništvo"},
+        { value:"22", label: "    FT - Fakulteta za turizem"},
+        { value:"12", label: "    FVV - Fakulteta za varnostne vede"},
+        { value:"14", label: "    FZV - Fakulteta za zdravstvene vede"},
+        { value:"17", label: "    MF - Medicinska fakulteta"},
+        { value:"10", label: "    PEF - Pedagoška fakulteta"},
+        { value:"18", label: "    PF - Pravna fakulteta"},
+        { value:"15", label: "    UKM - Univerzitetna knjižnica Maribor"},
+        { value:"21", label: "    UM - Univerza v Mariboru"},
+        { className:"NeIzbirna", value: "cobiss", label: "    COBISS"},
+        { value:"c50311", label: "    Ekonomsko poslovna fakulteta"},
+        { value:"c50314", label: "    Fakulteta za kmetijstvo"},
+        { value:"c55823", label: "    Fakulteta za logistiko"},
+        { value:"c50263", label: "    Fakulteta za organizacijske vede"},
+        { value:"c50061", label: "    Fakulteta za varnostne vede"},
+        { value:"c50322", label: "    Fakulteta za zdravstvene vede"},
+        { value:"c50312", label: "    Knjižnica tehniških fakultet"},
+        { value:"c55822", label: "    Medicinska fakulteta"},
+        { value:"c50317", label: "    Miklošičeva knjižnica - FPNM"},
+        { value:"c50326", label: "    Pravna fakulteta"},
+        { value:"c50300", label: "    Univerzitetna knjižnica Maribor"}
+      ]
+    }
+  }
+
   /**
 * Sproži hitro iskanje preko pritiska enter v iskalnem polju.
 * @param object e   Event ali null. Če, null, potem kar sproži iskanje, sicer
@@ -12,7 +54,7 @@ const Header = ({ siteTitle }) => {
 * @param string langCode 
 *                   Možnosti "slv" ali "eng".  
 */
-  function HitroIskanje_onKeyDown(e, langCode) {
+  HitroIskanje_onKeyDown = function(e, langCode) {
     console.log(e, langCode);
     // code = 0;
     // if(e != null) {
@@ -45,7 +87,7 @@ const Header = ({ siteTitle }) => {
   * @param string langCode 
   *                   Možnosti "slv" ali "eng".  
   */
-  function HitroIskanje_OnLupaClick(e, langCode) {
+  HitroIskanje_OnLupaClick = function(e, langCode) {
     // var niz = $("input#hitriIskalnik").val();
     // var vir=$("#iskaniVir").find(":selected").val();
 
@@ -87,63 +129,36 @@ const Header = ({ siteTitle }) => {
     //   }
   //}
 
-  function HitroIskanje_onFocus(e) {
+  HitroIskanje_onFocus = function(e) {
     // if(e.target.value == prevedi('hitroIskanje')) {
     //   e.target.value = '';
     // }
   }
 
 
-  function HitroIskanje_onBlur(e) {
+  HitroIskanje_onBlur = function(e) {
     // if(e.target.value == '') {
     //   e.target.value = prevedi('hitroIskanje');
     // }
   }
 
-  function ts(type, num) {
+  ts = function(type, num) {
 
   }
 
-  const dropdownOptions = [
-    { value:"dk", label: "DKUM"},
-    { value:"2", label: "EPF - Ekonomsko-poslovna fakulteta"},
-    { value:"19", label: "FE - Fakulteta za energetiko"},
-    { value:"3", label: "FERI - Fakulteta za elektrotehniko, računalništvo in informatiko"},
-    { value:"9", label: "FF - Filozofska fakulteta"},
-    { value:"5", label: "FGPA - Fakulteta za gradbeništvo, prometno inženirstvo in arhitekturo"},
-    { value:"13", label: "FKBV - Fakulteta za kmetijstvo in biosistemske vede"},
-    { value:"6", label: "FKKT - Fakulteta za kemijo in kemijsko tehnologijo"},
-    { value:"16", label: "FL - Fakulteta za logistiko"},
-    { value:"11", label: "FNM - Fakulteta za naravoslovje in matematiko"},
-    { value:"8", label: "FOV - Fakulteta za organizacijske vede"},
-    { value:"7", label: "FS - Fakulteta za strojništvo"},
-    { value:"22", label: "FT - Fakulteta za turizem"},
-    { value:"12", label: "FVV - Fakulteta za varnostne vede"},
-    { value:"14", label: "FZV - Fakulteta za zdravstvene vede"},
-    { value:"17", label: "MF - Medicinska fakulteta"},
-    { value:"10", label: "PEF - Pedagoška fakulteta"},
-    { value:"18", label: "PF - Pravna fakulteta"},
-    { value:"15", label: "UKM - Univerzitetna knjižnica Maribor"},
-    { value:"21", label: "UM - Univerza v Mariboru"},
-    { className:"NeIzbirna", value: "cobiss", label: "COBISS"},
-    { value:"c50311", label: "Ekonomsko poslovna fakulteta"},
-    { value:"c50314", label: "Fakulteta za kmetijstvo"},
-    { value:"c55823", label: "Fakulteta za logistiko"},
-    { value:"c50263", label: "Fakulteta za organizacijske vede"},
-    { value:"c50061", label: "Fakulteta za varnostne vede"},
-    { value:"c50322", label: "Fakulteta za zdravstvene vede"},
-    { value:"c50312", label: "Knjižnica tehniških fakultet"},
-    { value:"c55822", label: "Medicinska fakulteta"},
-    { value:"c50317", label: "Miklošičeva knjižnica - FPNM"},
-    { value:"c50326", label: "Pravna fakulteta"},
-    { value:"c50300", label: "Univerzitetna knjižnica Maribor"}
-  ]
+  DropdownMouseEnter(){
+    this.setState({showSubmenu: true});
+  }
+  DropdownMouseLeave(){
+    this.setState({showSubmenu: false});
+  }
 
+  render () {
   return (
     <header>
       <div id="zgornjiDelGlave">
         <div id="logo">
-          <Link href="/" title="Pojdi na prvo stran DKUM">
+          <Link to="/slo/" title="Pojdi na prvo stran DKUM">
             <img src={um_logo} alt="Logotip UM" />
           </Link>
         </div>
@@ -151,16 +166,16 @@ const Header = ({ siteTitle }) => {
         <div id="topMenu">
           <div className="custom">
             <div>
-              <a href="https://dk.um.si/info/index.php/slo">SLO</a> |
-              <a href="https://dk.um.si/info/index.php/eng">ENG</a> |
-              <a href="https://dk.um.si/cookies.php">Piškotki in zasebnost</a>
+              <Link to="/slo/">SLO</Link> |
+              <Link  to="/eng/"> ENG</Link> |
+              <a href="https://dk.um.si/cookies.php"> Piškotki in zasebnost</a>
             </div>
             <div className="iskalnoPolje">
               <input
                 id="hitriIskalnik"
-                onKeyDown={event => HitroIskanje_onKeyDown(event, "slv")}
-                onFocus={event => HitroIskanje_onFocus(event)}
-                onBlur={event => HitroIskanje_onBlur(event)}
+                onKeyDown={event => this.HitroIskanje_onKeyDown(event, "slv")}
+                onFocus={event => this.HitroIskanje_onFocus(event)}
+                onBlur={event => this.HitroIskanje_onBlur(event)}
                 type="text"
                 value="ISKANJE PO KATALOGU"
                 title="Iskanje po katalogu"
@@ -168,14 +183,19 @@ const Header = ({ siteTitle }) => {
               <img
                 src={looking_glass}
                 id="hitroIskanjeLupa"
-                onclick={event => HitroIskanje_OnLupaClick(event, "slv")}
+                onClick={event => this.HitroIskanje_OnLupaClick(event, "slv")}
                 alt="Lupa"
                 title="Išči"
               />
             </div>
 
-            <select id="iskaniVir" value={dropdownOptions[0].value} title="Vir iskanja">
-              {dropdownOptions.map(option => (
+            <select
+              id="iskaniVir"
+              value={this.state.dropdownOptions[0].value}
+              onChange={() => {}}
+              title="Vir iskanja"
+            >
+              {this.state.dropdownOptions.map(option => (
                 <option
                   className={option.className}
                   value={option.value}
@@ -188,21 +208,19 @@ const Header = ({ siteTitle }) => {
 
             {/* TO DO: IMPLEMENT TEXT SIZER */}
             <div>
-              <a
-                onClick={ts("Vsebina", 1)}
-                href="#"
+              <span
+                onClick={this.ts("Vsebina", 1)}
                 title="Povečaj velikost besedila"
-              >
-                Večja pisava
-              </a>{" "}
+                className="as-link">
+                Večja pisava 
+              </span>{" "}
               |
-              <a
-                onClick={ts("Vsebina", -1)}
-                href="#"
+              <span
+                onClick={this.ts("Vsebina", -1)}
                 title="Zmanjšaj velikost besedila"
-              >
-                Manjša pisava
-              </a>
+                className="as-link">
+                &nbsp;Manjša pisava
+              </span>
             </div>
           </div>
         </div>
@@ -211,9 +229,12 @@ const Header = ({ siteTitle }) => {
         <Link to="/slo/uvodnik">Uvodnik</Link>
         <a href="https://dk.um.si/Iskanje.php?lang=slv">Iskanje</a>
         <a href="https://dk.um.si/Brskanje.php?lang=slv">Brskanje</a>
-        <Link className="idOddajaDela" to="/slo/uvodnik">
+        <span
+          className="idOddajaDela"
+          onMouseEnter={this.DropdownMouseEnter.bind(this)}
+          onMouseLeave={this.DropdownMouseLeave.bind(this)}>
           Oddaja dela
-          <div className="nav-submenu">
+          <div className={"nav-submenu " + (this.state.showSubmenu ? "show" : "")}>
             <a href="https://dk.um.si/info/index.php/slo/oddaja-dela">
               Za študente
             </a>
@@ -221,14 +242,14 @@ const Header = ({ siteTitle }) => {
               Za zaposlene
             </a>
           </div>
-        </Link>
+        </span>
         <a href="https://dk.um.si/Statistika.php?lang=slv">Statistika</a>
         <a className="prijavaNi" href="https://dk.um.si/Prijava.php?lang=slv">
           Prijava
         </a>
       </nav>
     </header>
-  );
+  )};
 }
 
 Header.propTypes = {

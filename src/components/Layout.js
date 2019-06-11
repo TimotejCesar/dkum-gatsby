@@ -4,8 +4,9 @@ import Footer from '../components/Footer'
 import './global.css'
 import useSiteMetadata from './SiteMetadata'
 import Header from './Header'
+import CookieBanner from './CookieBanner'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, location }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -39,11 +40,13 @@ const TemplateWrapper = ({ children }) => {
         />
         <meta name="theme-color" content="#fff" />
 
-        <meta property="og:type" content="business.business" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:url" content={location} />
+        <meta property="og:image" content="../img/logo_og_slv.png" />
+        <meta property="og:site" content="DKUM" />
       </Helmet>
+      <CookieBanner />
       <div className="platno">
         <Header />
           {children}
