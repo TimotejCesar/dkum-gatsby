@@ -5,39 +5,24 @@ import './global.css'
 import useSiteMetadata from './SiteMetadata'
 import Header from './Header'
 import CookieBanner from './CookieBanner'
+import favicon from '../img/favicon.ico'
 
-const TemplateWrapper = ({ children, location }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({ children, location, pageTitle }) => {
+  const { title, description, keywords } = useSiteMetadata();
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>DKUM - {pageTitle}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
 
         <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/img/apple-touch-icon.png"
-        />
-        <link
           rel="icon"
-          type="image/png"
-          href="/img/favicon-32x32.png"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/img/favicon-16x16.png"
           sizes="16x16"
+          href={favicon}
         />
 
-        <link
-          rel="mask-icon"
-          href="/img/safari-pinned-tab.svg"
-          color="#ff4400"
-        />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="website" />

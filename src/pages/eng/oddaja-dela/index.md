@@ -26,7 +26,7 @@ Priloge:
 <p>
     <img src="../../../img/html.gif" width="16" height="16" /> 
     <a href="http://libguides.ukm.um.si/dkum" target="_blank">Vodič oddaje zaključnega dela</a><br />
-    <img src="../../img/pdf.gif" width="16" height="16" /> 
+    <img src="../../../img/pdf.gif" width="16" height="16" /> 
     <a href="https://dk.um.si/info/images/docs/Navodila.za.pretvorbo.MS.Word.dokumentov.v.PDF.pdf" 
         target="_blank">Navodila za pretvorbo MS Word dokumentov v PDF</a><br />
     <img src="../../../img/doc.gif" width="16" height="16" />

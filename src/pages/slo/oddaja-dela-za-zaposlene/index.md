@@ -1,6 +1,8 @@
 ---
 templateKey: content-page
 title: Oddaja dela za zaposlene
+header: Oddaja dela za zaposlene
+path: /slo/oddaja-dela-za-zaposlene
 ---
 Zaposleni Univerze v Mariboru imajo možnost oddaje svojih del v DKUM. Za oddajo se je potrebno najprej [Prijaviti](https://dk.um.si/prijava.php)
 v DKUM. Prijava poteka preko avtentikacijskega sistema ArnesAAI,

@@ -1,6 +1,8 @@
 ---
 templateKey: content-page
 title: Pogoji uporabe
+header: Pogoji uporabe
+path: /slo/pogoji-uporabe
 ---
 <div class="moz-text-html" lang="x-central-euro">
 

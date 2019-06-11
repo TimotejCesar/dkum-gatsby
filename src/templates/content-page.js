@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Link from 'gatsby-link'
 
-export const ContentPageTemplate = ({ title, content, contentComponent }) => {
+export const ContentPageTemplate = ({ title, path, header, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -12,18 +13,18 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
         <div className="pot">
             <ul className="breadcrumb">
                 <li>
-                    <a href="https://dk.um.si/info/index.php/slo/" className="pathway">Prva stran</a>
+                    <Link to="/slo/" className="pathway">Prva stran</Link>
                     <span className="divider"> &gt; </span>
                 </li>
                 <li>
-                    <a href="https://dk.um.si/info/index.php/slo/uvodnik" className="pathway pathway-last">{title}</a>
+                    <Link to={path} className="pathway pathway-last">{title}</Link>
                 </li>
             </ul>
           </div>
           <div className="teloVsebine">
             <div className="item-page">
               <div className="page-header">
-                <h1>{title}</h1>
+                <h1>{header}</h1>
               </div>
               <PageContent content={content} />
             </div>
@@ -42,10 +43,12 @@ const ContentPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout pageTitle={post.frontmatter.title}>
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        path={post.frontmatter.path}
+        header={post.frontmatter.header}
         content={post.html}
       />
     </Layout>
@@ -64,6 +67,8 @@ export const contentPageQuery = graphql`
       html
       frontmatter {
         title
+        path
+        header
       }
     }
   }
