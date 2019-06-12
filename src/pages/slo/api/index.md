@@ -1,6 +1,7 @@
 ---
 templateKey: content-page
-title: Vključitev DKUM v druge spletne strani
+title: API
+header: Vključitev DKUM v druge spletne strani
 ---
 Nekatere funkcionalnosti DKUM so dosegljive preko programskega vmesnika (API-ja), ki omogoča integracijo teh funkcionalnosti v druge spletne strani, mobilne in druge aplikacije. Trenutno so preko programskega vmesnika dosegljive naslednje funkcionalnosti:
 

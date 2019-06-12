@@ -1,6 +1,7 @@
 ---
 templateKey: content-page
-title: Oddaja dela za študente
+title: Oddaja dela
+header: Oddaja študentskih del
 ---
 
 Če želite oddati diplomsko, magistrsko ali doktorsko nalogo,

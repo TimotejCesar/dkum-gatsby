@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "gatsby-link"
+import partnerjiImg from '../img/partnerji_slv.gif'
 
 const FooterSitemap = () => {
   return (
@@ -9,16 +11,16 @@ const FooterSitemap = () => {
             <tr>
               <td>
                 <h3>Več o DKUM</h3>
-                <ul class="SiteMapList">
+                <ul className="SiteMapList">
                   <li>
-                    <a href="https://dk.um.si/info/index.php/slo/uvodnik">
+                    <Link to="/slo/uvodnik">
                       Uvodnik
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://dk.um.si/info/index.php/slo/component/content/article?id=5">
+                    <Link to="/slo/knjiznice-um/">
                       Knjižnice UM
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="https://dk.um.si/info/index.php/slo/2-vsebine-si/19-oddaja-studentskih-del">
@@ -29,7 +31,7 @@ const FooterSitemap = () => {
               </td>
               <td>
                 <h3>Katalog DKUM</h3>
-                <ul class="SiteMapList">
+                <ul className="SiteMapList">
                   <li>
                     <a href="https://dk.um.si/Iskanje.php?langID=slv">
                       Iskanje
@@ -49,17 +51,17 @@ const FooterSitemap = () => {
               </td>
               <td>
                 <h3>Disertacije UM v PQDT</h3>
-                <ul class="SiteMapList">
+                <ul className="SiteMapList">
                   <li>
-                    <a href="https://dk.um.si/info/index.php/slo/pqdt">
+                    <Link to="/slo/pqdt">
                       Oddaja del v PQDT
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </td>
               <td>
                 <h3>Drugi viri</h3>
-                <ul class="SiteMapList">
+                <ul className="SiteMapList">
                   <li>
                     <a href="http://www.cobiss.si/scripts/cobiss?command=CONNECT&amp;base=COBIB">
                       COBISS
@@ -79,9 +81,9 @@ const FooterSitemap = () => {
           </tbody>
         </table>
         <img
-          usemap="#partnerji"
-          src="Datoteke_za_DKUM%20-%20Prva%20stran/partnerji_slo.gif"
-          style="border-top: solid 1px silver;"
+          useMap="#partnerji"
+          src={partnerjiImg}
+          style={{borderTop: 'solid 1px silver'}}
           alt="Partnerji projekta"
           width="970"
           height="116"

@@ -1,4 +1,5 @@
 ---
 templateKey: content-page
-title: Frequently Asked Questions
+title: FAQ
+header: Pogosto zastavljena vprašanja
 ---

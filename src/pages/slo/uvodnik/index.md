@@ -2,7 +2,6 @@
 templateKey: content-page
 title: Uvodnik
 header: Uvodnik
-path: /slo/uvodnik
 ---
 
 Digitalna knjižnica Univerze v Mariboru (DKUM) je institucionalni repozitorij Univerze v Mariboru. Podpira odprti dostop do znanstvenoraziskovalnih, strokovnih in drugih del in raziskovalnih podatkov, ki nastajajo na univerzi v procesih raziskovanja in izobraževanja.

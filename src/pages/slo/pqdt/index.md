@@ -1,8 +1,7 @@
 ---
 templateKey: content-page
-title: PQDT
-header: 
-path: /slo/
+title: Proquest Dissertations and Theses
+header: Proquest Dissertations and Theses
 ---
 
 S študijskim letom 2012/2013 so na Univerzi v Mariboru uvedli oddajo doktorskih del Univerze v Mariboru tudi v ProQuestovo mednarodno bibliografsko bazo Dissertations and Theses. Tako se Univerza v Mariboru uvršča v skupino univerz, ki sistematično združujejo izvirno znanstveno delo pod okriljem podatkovne zbirke, ki je mednarodno uveljavljena, kot primarni vir iskanja tovrstnih informacij. Do danes se v omenjeni bazi nahaja 154 doktoratov študentov Univerze v Mariboru.

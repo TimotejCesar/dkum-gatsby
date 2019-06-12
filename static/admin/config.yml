@@ -13,8 +13,9 @@ collections:
         label: "Prva stran"
         name: "prva-stran"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/oddaja-dela-za-zaposlene/index.md"
         label: "Oddaja dela za zaposlene"
@@ -22,6 +23,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/oddaja-dela/index.md"
         label: "Oddaja dela"
@@ -29,6 +31,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/faq/index.md"
         label: "FAQ"
@@ -36,6 +39,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/uvodnik/index.md"
         label: "Uvodnik"
@@ -43,6 +47,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/pqdt/index.md"
         label: "Pqdt"
@@ -50,6 +55,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/pogoji-uporabe/index.md"
         label: "Pogoji uporabe"
@@ -57,6 +63,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/api/index.md"
         label: "API"
@@ -64,6 +71,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/slo/knjiznice-um/index.md"
         label: "Knjiznice UM"
@@ -71,6 +79,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages-eng"
     label: "Pages ENG"
@@ -79,22 +88,25 @@ collections:
         label: "Prva stran"
         name: "prva-stran"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/oddaja-dela-za-zaposlene/index.md"
-        label: "Oddaja dela za zaposlene"
-        name: "oddaja-dela-za-zaposlene"
+      - file: "src/pages/eng/document-upload-for-employees/index.md"
+        label: "Document Upload For Employees"
+        name: "document-upload-for-employees"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/oddaja-dela/index.md"
-        label: "Oddaja dela"
-        name: "oddaja-dela"
+      - file: "src/pages/eng/upload-document/index.md"
+        label: "Upload document"
+        name: "upload-document"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/faq/index.md"
         label: "FAQ"
@@ -102,6 +114,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/uvodnik/index.md"
         label: "Uvodnik"
@@ -109,6 +122,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/pqdt/index.md"
         label: "Pqdt"
@@ -116,6 +130,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/pogoji-uporabe/index.md"
         label: "Pogoji uporabe"
@@ -123,6 +138,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/api/index.md"
         label: "API"
@@ -130,6 +146,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/eng/knjiznice-um/index.md"
         label: "Knjiznice UM"
@@ -137,4 +154,5 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
