@@ -5,7 +5,7 @@ import partnerjiImg from '../img/partnerji_slv.gif'
 const FooterSitemap = () => {
   return (
     <section id="FooterSiteMap">
-      <div class="customfootersitemap">
+      <div className="customfootersitemap">
         <table>
           <tbody>
             <tr>

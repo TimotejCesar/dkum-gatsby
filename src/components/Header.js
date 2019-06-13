@@ -3,12 +3,15 @@ import PropTypes from "prop-types";
 import React from "react";
 import um_logo from "../img/logotip_um2.png";
 import looking_glass from "../img/gosearch15.png";
+import ts from '../functions/textsizer';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedSearchSource: "dk",
       showSubmenu: false,
+      searchTerm: null,
       dropdownOptions: [
         { value: "dk", label: "DKUM" },
         { value: "2", label: "    EPF - Ekonomsko-poslovna fakulteta" },
@@ -71,29 +74,26 @@ class Header extends React.Component {
    *                   Možnosti "slv" ali "eng".
    */
   HitroIskanje_onKeyDown = function(e, langCode) {
-    console.log(e, langCode);
-    // code = 0;
-    // if(e != null) {
-    // 	if(window.event) {
-    //     //IE
-    // 		code = e.keyCode;
-    // 		if(code == 13) e.keyCode = 0;
-    // 	}
-    // 	else if(e.which) {
-    //     //Firefox
-    // 		code = e.which;
-    // 	}
-    // }
-    // else
-    //   code = 13;
+    console.log("keydown", e);
+    var code = 0;
+    if (e !== null) {
+      if (window.event) {
+        //IE
+        code = e.keyCode;
+        if (code === 13) e.keyCode = 0;
+      } else if (e.which) {
+        //Firefox
+        code = e.which;
+      }
+    } else code = 13;
 
-    // if(code == 13) {
-    // 	if(e != null && e.preventDefault) e.preventDefault();
-    //   var niz = e.target.value;
-    //   var vir=$("#iskaniVir").find(":selected").val();
+    if (code === 13) {
+      if (e !== null && e.preventDefault) e.preventDefault();
+      var niz = e.target.value;
+      var vir = this.state.selectedSearchSource;
 
-    //   HitroIskanje_Sprozi(niz, vir, langCode);
-    // }
+      this.HitroIskanje_Sprozi(niz, vir, langCode);
+    }
   };
 
   /**
@@ -118,43 +118,59 @@ class Header extends React.Component {
    * @param string niz Vir iskanja.
    * @param string langCode Jezik. Možnosti "slv" ali "eng".
    */
-  //function HitroIskanje_Sprozi(niz, vir, langCode) {
-  // if(vir == 'cobiss') {
-  //     alert(prevedi('izberiteCobissVir'));
-  //     return;
-  //   }
-  //   else if(vir.charAt(0) == 'c') {
-  //     vir = vir.substr(1);
+  HitroIskanje_Sprozi = function(niz, vir, langCode) {
+    if (vir === "cobiss") {
+      //prevedi
+      alert("izberiteCobissVir");
+      return;
+    } else if (vir.charAt(0) === "c") {
+      vir = vir.substr(1);
 
-  //     if(niz.length > 0){
-  //       window.open('http://www.cobiss.si/scripts/cobiss?command=SEARCH&base='
-  //             + vir + '&dep=00&select=' + niz);
-  //     }
-  //     else {
-  //       alert(prevedi('vpisiteIskalniNiz'));
-  //     }
-
-  //   }
-  //   else {
-  //     location.href = (
-  //       "../../../Iskanje.php?type=enostavno&niz=" + niz + "&vir="+ vir + "&lang=" + langCode
-  //     );
-  //   }
-  //}
+      if (niz.length > 0) {
+        window.open(
+          "http://www.cobiss.si/scripts/cobiss?command=SEARCH&base=" +
+            vir +
+            "&dep=00&select=" +
+            niz
+        );
+      } else {
+        //prevedi
+        alert("vpisiteIskalniNiz");
+      }
+    } else {
+      window.location.href =
+        "https://dk.um.si/Iskanje.php?type=enostavno&niz=" +
+        niz +
+        "&vir=" +
+        vir +
+        "&lang=" +
+        langCode;
+    }
+  };
 
   HitroIskanje_onFocus = function(e) {
-    // if(e.target.value == prevedi('hitroIskanje')) {
-    //   e.target.value = '';
-    // }
+    if (e.target.value === "ISKANJE PO KATALOGU") {
+      e.target.value = "";
+    }
   };
 
   HitroIskanje_onBlur = function(e) {
-    // if(e.target.value == '') {
-    //   e.target.value = prevedi('hitroIskanje');
-    // }
+    if (e.target.value === "") {
+      e.target.value = "ISKANJE PO KATALOGU";
+    }
   };
 
-  ts = function(type, num) {};
+  DropdownChange(e) {
+    this.setState({
+      selectedSearchSource: e.target.value
+    });
+  }
+
+  SearchInputChange(e) {
+    this.setState({
+      searchTerm: e.target.value
+    });
+  }
 
   DropdownMouseEnter() {
     this.setState({ showSubmenu: true });
@@ -188,8 +204,9 @@ class Header extends React.Component {
                   onKeyDown={event => this.HitroIskanje_onKeyDown(event, "slv")}
                   onFocus={event => this.HitroIskanje_onFocus(event)}
                   onBlur={event => this.HitroIskanje_onBlur(event)}
+                  onChange={event => this.SearchInputChange(event)}
                   type="text"
-                  value="ISKANJE PO KATALOGU"
+                  defaultValue="ISKANJE PO KATALOGU"
                   title="Iskanje po katalogu"
                 />
                 <img
@@ -203,9 +220,9 @@ class Header extends React.Component {
 
               <select
                 id="iskaniVir"
-                value={this.state.dropdownOptions[0].value}
-                onChange={() => {}}
+                onChange={event => this.DropdownChange(event)}
                 title="Vir iskanja"
+                value={this.state.dropdownOptions[0].value}
               >
                 {this.state.dropdownOptions.map(option => (
                   <option
@@ -221,7 +238,7 @@ class Header extends React.Component {
               {/* TO DO: IMPLEMENT TEXT SIZER */}
               <div>
                 <span
-                  onClick={this.ts("Vsebina", 1)}
+                  onClick={() => ts("Vsebina", 1)}
                   title="Povečaj velikost besedila"
                   className="as-link"
                 >
@@ -229,7 +246,7 @@ class Header extends React.Component {
                 </span>{" "}
                 |
                 <span
-                  onClick={this.ts("Vsebina", -1)}
+                  onClick={() => ts("Vsebina", -1)}
                   title="Zmanjšaj velikost besedila"
                   className="as-link"
                 >
