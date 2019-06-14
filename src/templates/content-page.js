@@ -39,11 +39,13 @@ ContentPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const ContentPage = ({ data }) => {
+const ContentPage = ({ data, pathContext: {locale} }) => {
   const { markdownRemark: post } = data
 
+  console.log("content page locale: " + locale);
+
   return (
-    <Layout pageTitle={post.frontmatter.title}>
+    <Layout pageTitle={post.frontmatter.title} locale={locale}>
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

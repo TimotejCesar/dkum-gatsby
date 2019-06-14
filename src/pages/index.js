@@ -1,12 +1,14 @@
 import React from 'react'
-import { Redirect } from '@reach/router'
+import { navigateTo } from 'gatsby';
 
 class IndexPage extends React.Component {
 
+    componentDidMount() {
+        navigateTo("slo/");
+    }
+
     render() {
-        return(
-            <Redirect to="slo" />
-        )
+        return null;
     }
 }
 

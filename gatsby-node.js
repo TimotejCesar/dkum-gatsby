@@ -3,6 +3,8 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
+const locales = require('./src/constants/locales')
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -32,6 +34,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id
+      const lang = edge.node.fields.slug.includes("/eng/") ? 'en' : 'sl';
+      console.log("page: " + edge.node.fields.slug + ", language: " + lang);
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
@@ -40,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          locale: lang
         },
       })
     })

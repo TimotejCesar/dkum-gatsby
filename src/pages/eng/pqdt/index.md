@@ -1,11 +1,12 @@
 ---
 templateKey: content-page
-title: PQDT
+title: Proquest Dissertations and Theses
+header: Proquest Dissertations and Theses
 ---
+DISSERTATIONS UPLOAD TO PROQUEST DATABASE DISSERTATIONS & THESES GLOBAL
 
-S študijskim letom 2012/2013 so na Univerzi v Mariboru uvedli oddajo doktorskih del Univerze v Mariboru tudi v ProQuestovo mednarodno bibliografsko bazo Dissertations and Theses. Tako se Univerza v Mariboru uvršča v skupino univerz, ki sistematično združujejo izvirno znanstveno delo pod okriljem podatkovne zbirke, ki je mednarodno uveljavljena, kot primarni vir iskanja tovrstnih informacij. Do danes se v omenjeni bazi nahaja 154 doktoratov študentov Univerze v Mariboru.
+In the academic year 2012/2013, the submission of the university PhD dissertations into ProQuest's international bibliographic database Dissertations and Theses was introduced at the University of Maribor. The University of Maribor therefore became a part of the universities that systematically collect the original scientific work under the auspices of the internationally established Proquest database, which serves as the primary source for searching r such information. 154 PhD theses of the University of Maribor are in this database until today.
 
-Univerza v Mariboru je s Proquestom podpisala dogovor, s katerim posamično oddajo nadomešča  z avtomatsko žetvijo doktoratov iz Digitalne knjižnice Univerze v Mariboru. Oddaja v podatkovno zbirko ProQuest Dissertations & Theses se tako izvaja avtomatizirano s postopkom prevzemanja doktorskih disertacij preko OAI-PMH strežnika DKUM.
+The University of Maribor has signed an agreement with Proquest to replace individual uploading with harvesting of the PhD dissertations of University of Maribor students from the University of Maribor Digital Library. Submission to the ProQuest Dissertations & Theses database is carried out automatically through the OAI-PMH server DKUM.
 
-V  skladu z 41\. členom Pravilnika o doktorskem študiju na Univerzi v Mariboru (št: 012/2018/1) so pogoji javne objave doktorske disertacije v podatkovni zbirki ProQuest Dissertations & Theses enaki pogojem za objavo v Digitalni knjižnici Univerze v Mariboru.  Seznanite se s pogoji Proquest-a za oddajo in javno objavo doktorske disertacije v podatkovno zbirko ProQuest Dissertations & Theses Global  
-([http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf](http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf)).
+According to the Article 41 of the Rules of Doctoral Studies at the University of Maribor (No: 012/2018/1), the conditions for the publication of the PhD dissertations in the ProQuest Dissertations & Theses database are equivalent to the conditions for publication in the University of Maribor Digital Library. Get acquainted with the terms of the Proquest for submitting and publishing the doctoral dissertation to the ProQuest Dissertations & Theses Global database ([http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf](http://contentz.mkt5049.com/lp/43888/382619/PQDTauthoragreement.pdf)).

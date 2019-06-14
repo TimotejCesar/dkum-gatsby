@@ -1,0 +1,35 @@
+{
+"izberiteCobissVir": "Select one of the COBISS sources!",
+"vpisiteIskalniNiz": "Enter query string!",
+"vpisiteVrsticoSpodatki": "Input line with data:",
+"vnesenPrazniNiz": "You entered an empty string, nothing has been done!",
+"nepricakovanoVelikoPodatkov": "Unexpected large number of parameters, input max. 3!",
+"opisNiNaVoljo": "Abstract is not available!",
+"opis": "Abstract",
+"pocakajte": "Please wait....",
+"hitroIskanje": "SEARCH THE CATALOG",
+
+"cookieLaw": "Our website uses cookies, for some of them we need your consent.",
+"cookieLaw_ok": "Edit consent...",
+"cookieLaw_url": "../../../cookies.php?lang=eng",
+"cookies_and_privacy": "Cookies and privacy",
+
+"kodaJezika": "eng",
+"odjava": "Log out",
+"uporabnik": "USER",
+"uporabnik_title": "User: ",
+
+"menu_zaStudente_text": "For students",
+"menu_zaStudente_url": "upload-document",
+"menu_zaZaposlene_text": "For employees",
+"menu_zaZaposlene_url": "document-upload-for-employees",
+
+"largerFont": "Larger font",
+"smallerFont": "Smaller font",
+
+"nav_search" : "Search",
+"nav_upload_document" : "Upload document",
+"nav_browsing" : "Browsing",
+"nav_statistics": "Statistics",
+"nav_login": "Login" 
+}

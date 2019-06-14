@@ -116,9 +116,9 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/uvodnik/index.md"
-        label: "Uvodnik"
-        name: "uvodnik"
+      - file: "src/pages/eng/introduction/index.md"
+        label: "Introduction"
+        name: "introduction"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
@@ -132,25 +132,17 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/pogoji-uporabe/index.md"
-        label: "Pogoji uporabe"
-        name: "pogoji-uporabe"
+      - file: "src/pages/eng/policies/index.md"
+        label: "Policies"
+        name: "policies"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "header", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/api/index.md"
-        label: "API"
-        name: "api"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/eng/knjiznice-um/index.md"
-        label: "Knjiznice UM"
-        name: "knjiznice-um"
+      - file: "src/pages/eng/um-libraries/index.md"
+        label: "UM libraries"
+        name: "um-libraries"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}

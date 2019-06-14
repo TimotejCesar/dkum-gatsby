@@ -1,0 +1,35 @@
+{
+"izberiteCobissVir": "Izberite enega izmed COBISS virov!",
+"vpisiteIskalniNiz": "Vpisite iskalni niz!",
+"vpisiteVrsticoSpodatki": "Vpišite vrstico s podatki:",
+"vnesenPrazniNiz": "Vnesli ste prazen niz, nič ni bilo narejeno!",
+"nepricakovanoVelikoPodatkov": "Nepričakovano veliko podatkov, pričakujem največ tri!",
+"opisNiNaVoljo": "Opis ni na voljo!",
+"opis": "Opis",
+"pocakajte": "Prosim, počakajte...",
+"hitroIskanje": "ISKANJE PO KATALOGU",
+
+"cookieLaw": "Naša spletna stran uporablja piškotke, za nekatere potrebujemo vašo privolitev.",
+"cookieLaw_ok": "Uredi privolitev...",
+"cookieLaw_url": "dk.um.si/cookies.php?lang=slv",
+"cookies_and_privacy": "Piškotki in zasebnost",
+
+"kodaJezika": "slv",
+"odjava": "Odjava",
+"uporabnik": "UPORABNIK",
+"uporabnik_title": "Uporabnik: ",
+
+"menu_zaStudente_text": "Za študente",
+"menu_zaStudente_url": "oddaja-dela",
+"menu_zaZaposlene_text": "Za zaposlene",
+"menu_zaZaposlene_url": "oddaja-dela-za-zaposlene",
+
+"largerFont": "Večja pisava",
+"smallerFont": "Manjša pisava",
+
+"nav_search" : "Iskanje",
+"nav_upload_document" : "Oddaja dela",
+"nav_browsing" : "Brskanje",
+"nav_statistics": "Statistika",
+"nav_login": "Prijava" 
+}

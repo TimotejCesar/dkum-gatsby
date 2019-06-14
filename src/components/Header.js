@@ -1,17 +1,20 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import um_logo from "../img/logotip_um2.png";
+import um_logo_sl from "../img/logotip_um2.png";
+import um_logo_en from "../img/logotip_um2_eng.png";
 import looking_glass from "../img/gosearch15.png";
-import ts from '../functions/textsizer';
+import { FormattedMessage, intlShape, injectIntl } from "react-intl";
+import TextSizer from "../components/TextSizer";
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor({ intl }) {
+    super({ intl });
     this.state = {
       selectedSearchSource: "dk",
       showSubmenu: false,
       searchTerm: null,
+      langCode: this.props.intl.locale === "sl" ? "slv" : "eng",
       dropdownOptions: [
         { value: "dk", label: "DKUM" },
         { value: "2", label: "    EPF - Ekonomsko-poslovna fakulteta" },
@@ -74,7 +77,6 @@ class Header extends React.Component {
    *                   Možnosti "slv" ali "eng".
    */
   HitroIskanje_onKeyDown = function(e, langCode) {
-    console.log("keydown", e);
     var code = 0;
     if (e !== null) {
       if (window.event) {
@@ -103,13 +105,13 @@ class Header extends React.Component {
    *                   Možnosti "slv" ali "eng".
    */
   HitroIskanje_OnLupaClick = function(e, langCode) {
-    // var niz = $("input#hitriIskalnik").val();
-    // var vir=$("#iskaniVir").find(":selected").val();
-    // if(niz===prevedi('hitroIskanje')){
-    //   niz="";
-    //   $("input#hitriIskalnik").val(niz);
-    // }
-    // HitroIskanje_Sprozi(niz, vir, langCode);
+    var niz = this.state.searchTerm;
+    var vir= this.state.selectedSearchSource;
+    if(niz === this.props.intl.formatMessage({id: 'hitroIskanje'})){
+      niz="";
+      this.setState({searchTerm : niz});
+    }
+    this.HitroIskanje_Sprozi(niz, vir, langCode);
   };
 
   /**
@@ -121,7 +123,7 @@ class Header extends React.Component {
   HitroIskanje_Sprozi = function(niz, vir, langCode) {
     if (vir === "cobiss") {
       //prevedi
-      alert("izberiteCobissVir");
+      this.props.intl.formatMessage({ id: "izberiteCobissVir" });
       return;
     } else if (vir.charAt(0) === "c") {
       vir = vir.substr(1);
@@ -135,7 +137,7 @@ class Header extends React.Component {
         );
       } else {
         //prevedi
-        alert("vpisiteIskalniNiz");
+        alert(this.props.intl.formatMessage({ id: "vpisiteIskalniNiz" }));
       }
     } else {
       window.location.href =
@@ -149,14 +151,16 @@ class Header extends React.Component {
   };
 
   HitroIskanje_onFocus = function(e) {
-    if (e.target.value === "ISKANJE PO KATALOGU") {
+    if (
+      e.target.value === this.props.intl.formatMessage({ id: "hitroIskanje" })
+    ) {
       e.target.value = "";
     }
   };
 
   HitroIskanje_onBlur = function(e) {
     if (e.target.value === "") {
-      e.target.value = "ISKANJE PO KATALOGU";
+      e.target.value = this.props.intl.formatMessage({ id: "hitroIskanje" });
     }
   };
 
@@ -185,7 +189,12 @@ class Header extends React.Component {
         <div id="zgornjiDelGlave">
           <div id="logo">
             <Link to="/slo/" title="Pojdi na prvo stran DKUM">
-              <img src={um_logo} alt="Logotip UM" />
+              <img
+                src={
+                  this.props.intl.locale === "sl" ? um_logo_sl : um_logo_en
+                }
+                alt="Logotip UM"
+              />
             </Link>
           </div>
 
@@ -193,26 +202,32 @@ class Header extends React.Component {
             <div className="custom">
               <div>
                 <Link to="/slo/">SLO</Link> |<Link to="/eng/"> ENG</Link> |
-                <a href="https://dk.um.si/cookies.php">
+                <a href="https://dk.um.si/cookies.php" className="as-link">
                   {" "}
-                  Piškotki in zasebnost
+                  <FormattedMessage id="cookies_and_privacy" />
                 </a>
               </div>
               <div className="iskalnoPolje">
                 <input
                   id="hitriIskalnik"
-                  onKeyDown={event => this.HitroIskanje_onKeyDown(event, "slv")}
+                  onKeyDown={event =>
+                    this.HitroIskanje_onKeyDown(event, this.state.langCode)
+                  }
                   onFocus={event => this.HitroIskanje_onFocus(event)}
                   onBlur={event => this.HitroIskanje_onBlur(event)}
                   onChange={event => this.SearchInputChange(event)}
                   type="text"
-                  defaultValue="ISKANJE PO KATALOGU"
+                  defaultValue={this.props.intl.formatMessage({
+                    id: "hitroIskanje"
+                  })}
                   title="Iskanje po katalogu"
                 />
                 <img
                   src={looking_glass}
                   id="hitroIskanjeLupa"
-                  onClick={event => this.HitroIskanje_OnLupaClick(event, "slv")}
+                  onClick={event =>
+                    this.HitroIskanje_OnLupaClick(event, this.state.langCode)
+                  }
                   alt="Lupa"
                   title="Išči"
                 />
@@ -235,49 +250,57 @@ class Header extends React.Component {
                 ))}
               </select>
 
-              {/* TO DO: IMPLEMENT TEXT SIZER */}
-              <div>
-                <span
-                  onClick={() => ts("Vsebina", 1)}
-                  title="Povečaj velikost besedila"
-                  className="as-link"
-                >
-                  Večja pisava
-                </span>{" "}
-                |
-                <span
-                  onClick={() => ts("Vsebina", -1)}
-                  title="Zmanjšaj velikost besedila"
-                  className="as-link"
-                >
-                  &nbsp;Manjša pisava
-                </span>
-              </div>
+              <TextSizer />
             </div>
           </div>
         </div>
         <nav>
-          <Link to="/slo/uvodnik">Uvodnik</Link>
-          <a href="https://dk.um.si/Iskanje.php?lang=slv">Iskanje</a>
-          <a href="https://dk.um.si/Brskanje.php?lang=slv">Brskanje</a>
+          {this.props.intl.locale === "sl" ? (
+            <Link to="/slo/uvodnik">Uvodnik</Link>
+          ) : (
+            <Link to="/eng/introduction">Introduction</Link>
+          )}
+          <a href={"https://dk.um.si/Iskanje.php?lang=" + this.state.langCode}>
+            <FormattedMessage id="nav_search" />
+          </a>
+          <a href={"https://dk.um.si/Brskanje.php?lang=" + this.state.langCode}>
+            <FormattedMessage id="nav_browsing" />
+          </a>
           <span
             className="idOddajaDela"
             onMouseEnter={this.DropdownMouseEnter.bind(this)}
             onMouseLeave={this.DropdownMouseLeave.bind(this)}
           >
-            Oddaja dela
+            <FormattedMessage id="nav_upload_document" />
             <div
               className={
                 "nav-submenu " + (this.state.showSubmenu ? "show" : "")
               }
             >
-              <Link to="/slo/oddaja-dela">Za študente</Link>
-              <Link to="/slo/oddaja-dela-za-zaposlene">Za zaposlene</Link>
+              {this.props.intl.locale === "sl" ? (
+                <Link to="/slo/oddaja-dela">Za študente</Link>
+              ) : (
+                <Link to="/eng/upload-document">Upload document</Link>
+              )}
+              {this.props.intl.locale === "sl" ? (
+                <Link to="/slo/oddaja-dela-za-zaposlene">Za zaposlene</Link>
+              ) : (
+                <Link to="/eng/document-upload-for-employees">
+                  Document upload for employees
+                </Link>
+              )}
             </div>
           </span>
-          <a href="https://dk.um.si/Statistika.php?lang=slv">Statistika</a>
-          <a className="prijavaNi" href="https://dk.um.si/Prijava.php?lang=slv">
-            Prijava
+          <a
+            href={"https://dk.um.si/Statistika.php?lang=" + this.state.langCode}
+          >
+            <FormattedMessage id="nav_statistics" />
+          </a>
+          <a
+            className="prijavaNi"
+            href={"https://dk.um.si/Prijava.php?lang=" + this.state.langCode}
+          >
+            <FormattedMessage id="nav_login" />
           </a>
         </nav>
       </header>
@@ -286,11 +309,12 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
+  intl: intlShape
 };
 
 Header.defaultProps = {
   siteTitle: ``
 };
 
-export default Header;
+export default injectIntl(Header);

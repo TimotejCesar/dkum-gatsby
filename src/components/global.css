@@ -92,7 +92,13 @@ nav a {
   position: relative;
 }
 
-nav a:hover {
+nav a > span {
+  color: #58595B !important;
+  font: 15px Helvetica, Arial, sans-serif;
+}
+
+nav a:hover,
+nav a:hover > span {
   background-color: #006385;
   color: white !important;
 }
@@ -130,11 +136,19 @@ div.teloVsebine a {
 }
 
 .as-link {
-  color: #0072BC;
+  color: #0072BC !important;
   text-decoration: none !important;
-  font-size: 12px;
-  font-family: Tahoma, sans-serif;
-  cursor: pointer;
+  font-size: 12px !important;
+  font-family: Tahoma, sans-serif !important; 
+  cursor: pointer !important;
+}
+
+.as-link > span {
+  color: #0072BC !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-family: Tahoma, sans-serif !important; 
+  cursor: pointer !important;
 }
 
 .breadcrumb .divider {
@@ -500,7 +514,8 @@ img#hitroIskanjeLupa:hover{
   position: relative;
 }
 
-.idOddajaDela:hover {
+.idOddajaDela:hover,
+.idOddajaDela:hover > span {
   background-color: #006385;
   color: white !important;
 }

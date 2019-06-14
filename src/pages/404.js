@@ -1,6 +1,14 @@
 import React from 'react'
-import { Redirect } from '@reach/router'
+import { navigateTo } from 'gatsby';
 
-const NotFoundPage = () => <Redirect to="/slo/" />
+class NotFoundPage extends React.Component {
+    componentDidMount() {
+        navigateTo("slo/")
+    }
+
+    render() {
+        return null;
+    }
+}
 
 export default NotFoundPage
