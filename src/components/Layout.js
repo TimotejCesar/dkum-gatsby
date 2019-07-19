@@ -23,7 +23,7 @@ const Layout = ({ children, location, pageTitle, locale }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang={locale} />
         <title>DKUM - {pageTitle}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -38,7 +38,7 @@ const Layout = ({ children, location, pageTitle, locale }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:url" content={location} />
+        <meta property="og:url" content={window.location.href} />
         <meta property="og:image" content="../img/logo_og_slv.png" />
         <meta property="og:site" content="DKUM" />
       </Helmet>

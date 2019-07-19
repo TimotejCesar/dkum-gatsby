@@ -188,14 +188,21 @@ class Header extends React.Component {
       <header>
         <div id="zgornjiDelGlave">
           <div id="logo">
+          { this.props.intl.locale === "sl" ? (
             <Link to="/slo/" title="Pojdi na prvo stran DKUM">
               <img
-                src={
-                  this.props.intl.locale === "sl" ? um_logo_sl : um_logo_en
-                }
+                src={um_logo_sl}
                 alt="Logotip UM"
               />
-            </Link>
+            </Link>) : (
+              <Link to="/eng/" title="Pojdi na prvo stran DKUM">
+              <img
+                src={um_logo_en}
+                alt="Logotip UM"
+              />
+            </Link>)
+          }
+
           </div>
 
           <div id="topMenu">

@@ -81,7 +81,7 @@ header: Welcome to the Digital library of University of Maribor
         digital library of University of Maribor.
         Number of works includes only works with full text (with files) in all languages.
         New works are all works, published in last 30 days. Table cells with
-        <img src="../../img/Lupa.gif" alt="Magnifying glass" title="Magnifying glass" />
+        <img src="../../img/lupa1.gif" alt="Magnifying glass" title="Magnifying glass" />
         start with a search, while cells with
         <img src="../../img/rss.gif" alt="RSS" title="RSS" /> enable RSS subscription.
     </p>

@@ -6,10 +6,13 @@ module.exports = {
     description:
       'Digitalna knjižnica Univerze v Mariboru: diplomska, magistrska in doktorska dela Univerze v Mariboru',
     keywords:
-      'DKUM, digitalna knjižnica Univerze v Mariboru, digitalna knjižnica, knjižnica, diplome, magisteriji, doktorati, UM'
+      'DKUM, digitalna knjižnica Univerze v Mariboru, digitalna knjižnica, knjižnica, diplome, magisteriji, doktorati, UM',
+    siteUrl:  
+      'https://sad-bhabha-eeb983.netlify.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

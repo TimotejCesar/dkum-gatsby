@@ -85,7 +85,7 @@ path: /slo/
   vključene v digitalno knjižnico UM.
   Zajeta so samo gradiva s celotnim besedilom (z datoteko) v vseh jezikih.
   Kot nova so šteta tista gradiva, ki so bila objavljena v zadnjih 30-ih dneh. Polja z
-  <img src="../../img/Lupa.gif" alt="Lupa" title="Lupa"> sprožijo iskanje, polja z
+  <img src="../../img/lupa1.gif" alt="Lupa" title="Lupa"> sprožijo iskanje, polja z
   <img src="../../img/rss.gif" alt="RSS" title="RSS"> pa omogočajo naročanje
   na RSS.</p>
 <table class="OrgStat">
