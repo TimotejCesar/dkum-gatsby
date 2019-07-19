@@ -18,8 +18,8 @@ const messages = { en, sl }
 
 addLocaleData([...enData, ...slData])
 
-const Layout = ({ children, location, pageTitle, locale }) => {
-  const { title, description, keywords } = useSiteMetadata();
+const Layout = ({ children, slug, pageTitle, locale }) => {
+  const { title, description, keywords, siteUrl } = useSiteMetadata();
   return (
     <div>
       <Helmet>
@@ -38,7 +38,7 @@ const Layout = ({ children, location, pageTitle, locale }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={siteUrl + slug} />
         <meta property="og:image" content="../img/logo_og_slv.png" />
         <meta property="og:site" content="DKUM" />
       </Helmet>
@@ -52,14 +52,14 @@ const Layout = ({ children, location, pageTitle, locale }) => {
   )
 }
 
-const TemplateWrapper = ({ children, location, pageTitle, locale }) => {
+const TemplateWrapper = ({ children, slug, pageTitle, locale }) => {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Layout
         children={children}
         pageTitle={pageTitle}
         locale={locale}
-        location={location}
+        slug={slug}
       />
     </IntlProvider>
   )

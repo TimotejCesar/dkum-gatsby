@@ -48,11 +48,11 @@ IndexPageTemplate.propTypes = {
   contentComponent: PropTypes.func
 };
 
-const IndexPage = ({ data, pathContext: {locale} }) => {
+const IndexPage = ({ data, pathContext: {locale, slug} }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout pageTitle={post.frontmatter.title} locale={locale}>
+    <Layout pageTitle={post.frontmatter.title} locale={locale} slug={slug}>
       <IndexPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

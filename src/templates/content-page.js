@@ -39,17 +39,15 @@ ContentPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const ContentPage = ({ data, pathContext: {locale} }) => {
-  const { markdownRemark: post } = data
-
-  console.log("content page locale: " + locale);
+const ContentPage = ({ data, pathContext: {locale, slug} }) => {
+  const { markdownRemark: post } = data;
 
   return (
-    <Layout pageTitle={post.frontmatter.title} locale={locale}>
+    <Layout pageTitle={post.frontmatter.title} locale={locale} slug={slug}>
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        path={post.frontmatter.path}
+        path={slug}
         header={post.frontmatter.header}
         content={post.html}
       />
@@ -69,7 +67,6 @@ export const contentPageQuery = graphql`
       html
       frontmatter {
         title
-        path
         header
       }
     }
