@@ -40,7 +40,13 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "header", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Questions and Answers"
+            name: "qa"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {label: Question, name: question, widget: string, default: "Question?"}
+              - {label: Answer, name: answer, widget: markdown, default: "Answer."}
       - file: "src/pages/slo/uvodnik/index.md"
         label: "Uvodnik"
         name: "uvodnik"
@@ -115,7 +121,13 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "content-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "header", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Questions and Answers"
+            name: "qa"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {label: Question, name: question, widget: string, default: "Question?"}
+              - {label: Answer, name: answer, widget: markdown, default: "Answer."}
       - file: "src/pages/eng/introduction/index.md"
         label: "Introduction"
         name: "introduction"
