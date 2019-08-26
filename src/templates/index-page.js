@@ -31,108 +31,7 @@ export const IndexPageTemplate = ({
             <div className="page-header">
               <h1>{header}</h1>
             </div>
-            {/* <PageContent content={content} /> */}
-            <table class="OrgStat">
-              <tbody>
-                <tr>
-                  <th rowspan="2">Organizacija</th>
-                  <th colspan="2">Diplome</th>
-                  <th colspan="2">Magisteriji</th>
-                  <th colspan="2">Doktorati</th>
-                  <th colspan="2">Ostalo</th>
-                  <th colspan="2">Skupaj</th>
-                </tr>
-                <tr>
-                  <th class="sub">Vseh</th>
-                  <th class="sub">Novih</th>
-                  <th class="sub">Vseh</th>
-                  <th class="sub">Novih</th>
-                  <th class="sub">Vseh</th>
-                  <th class="sub">Novih</th>
-                  <th class="sub">Vseh</th>
-                  <th class="sub">Novih</th>
-                  <th class="sub">Vseh</th>
-                  <th class="sub">Novih</th>
-                </tr>
-                <tr>
-                  <td class="naziv">EPF - Ekonomsko-poslovna fakulteta</td>
-                  <td
-                    class="Search"
-                    onclick="location.href='https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=dip&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv'"
-                    title="Sproži iskanje - diplome EPF"
-                  >
-                    <a href="https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=dip&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv">
-                      7.442
-                    </a>
-                  </td>
-                  <td
-                    class="Rss"
-                    onclick="location.href='https://dk.um.si/rss.php?o=2&amp;v=dip&amp;lang=slv'"
-                    title="Naroči na RSS - diplome EPF"
-                  >
-                    <span class="RssLink">3</span>
-                  </td>
-                  <td
-                    class="Search"
-                    onclick="location.href='https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=mag&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv'"
-                    title="Sproži iskanje - magisteriji EPF"
-                  >
-                    <a href="https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=mag&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv">
-                      1.637
-                    </a>
-                  </td>
-                  <td
-                    class="Rss"
-                    onclick="location.href='https://dk.um.si/rss.php?o=2&amp;v=mag&amp;lang=slv'"
-                    title="Naroči na RSS - magisteriji EPF"
-                  >
-                    <span class="RssLink">12</span>
-                  </td>
-                  <td
-                    class="Search"
-                    onclick="location.href='https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=dok&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv'"
-                    title="Sproži iskanje - doktorati EPF"
-                  >
-                    <a href="https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=dok&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv">
-                      94
-                    </a>
-                  </td>
-                  <td
-                    class="Rss"
-                    onclick="location.href='https://dk.um.si/rss.php?o=2&amp;v=dok&amp;lang=slv'"
-                    title="Naroči na RSS - doktorati EPF"
-                  >
-                    <span class="RssLink">0</span>
-                  </td>
-                  <td
-                    class="Search"
-                    onclick="location.href='https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=ostalo&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv'"
-                    title="Sproži iskanje - druga gradiva EPF"
-                  >
-                    <a href="https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vrsta=ostalo&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv">
-                      1.604
-                    </a>
-                  </td>
-                  <td>&nbsp;</td>
-                  <td
-                    class="Search"
-                    onclick="location.href='https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv'"
-                    title="Sproži iskanje - vsa gradiva EPF"
-                  >
-                    <a href="https://dk.um.si/Iskanje.php?type=napredno&amp;niz0=&amp;vir=2&amp;chkFullOnly=on&amp;lang=slv">
-                      10.777
-                    </a>
-                  </td>
-                  <td
-                    class="Rss"
-                    onclick="location.href='https://dk.um.si/rss.php?o=2&amp;v=vse&amp;lang=slv'"
-                    title="Naroči na RSS - vsa gradiva EPF"
-                  >
-                    <span class="RssLink">15</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <PageContent content={content} />
           </div>
         </div>
       </section>
@@ -149,7 +48,7 @@ IndexPageTemplate.propTypes = {
   contentComponent: PropTypes.func
 };
 
-const IndexPage = ({ data, pathContext: { locale, slug } }) => {
+const IndexPage = ({ data, pathContext: {locale, slug} }) => {
   const { markdownRemark: post } = data;
 
   return (

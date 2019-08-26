@@ -503,3 +503,122 @@ div.accordionfaqheader
 {
 	visibility: hidden;
 }
+
+/* lightnessfaq faq layout */
+#accordion1.lightnessfaq div.accordionfaqitem
+{
+	margin-top: 0px !important;
+}
+#accordion1.lightnessfaq.contentborder div.accordionfaqitem
+{
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: #dddddd;
+}
+#accordion1.lightnessfaq.contentborder.headerborder div.accordionfaqitem
+{
+	border-width: 0px 1px 1px 1px;
+}
+#accordion1.lightnessfaq.contentbackground div.accordionfaqitem
+{
+	background: #eeeeee 50% top repeat-x;
+	color: #333333;
+}
+#accordion1.lightnessfaq .accordionfaqheader
+{
+	margin: 0px 0px 1px !important;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#accordion1.lightnessfaq .accordionfaqheader,
+#accordion1.lightnessfaq .accordionfaqheader a
+{
+	font-size: 100%;
+	color: #1c94c4;
+	font-weight: bold;
+}
+#accordion1.lightnessfaq.headerborder .accordionfaqheader
+{
+	border: 1px solid #cccccc;
+}
+#accordion1.lightnessfaq.headerborder .accordionfaqheader:hover,
+#accordion1.lightnessfaq.headerborder .accordionfaqheader.selected
+{
+	border: 1px solid #fbd850;
+}
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader,
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader a
+{
+	background: #f6f6f6 50% 50% repeat-x;
+}
+#accordion1.lightnessfaq .accordionfaqheader a,
+#accordion1.lightnessfaq .accordionfaqheader a:hover,
+#accordion1.lightnessfaq .accordionfaqheader a:active,
+#accordion1.lightnessfaq .accordionfaqheader a:focus
+{
+	text-decoration: none;
+	background-color: transparent;
+}
+#accordion1.lightnessfaq .accordionfaqheader:hover,
+#accordion1.lightnessfaq .accordionfaqheader:hover a
+{
+	color: #c77405;
+}
+#accordion1.lightnessfaq .accordionfaqheader.selected,
+#accordion1.lightnessfaq .accordionfaqheader.selected a
+{
+	color: #eb8f00;
+}
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader:hover,
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader:hover a
+{
+	background: #fdf5ce 50% 50% repeat-x;
+	color: #c77405;
+}
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader.selected,
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader.selected a
+{
+	background: #ffffff 50% 50% repeat-x;
+	color: #eb8f00;
+}
+#accordion1.lightnessfaq .accordionfaqheader.selected
+{
+	margin-bottom: -1px !important;
+}
+#accordion1.lightnessfaq .accordionfaqheader:hover,
+#accordion1.lightnessfaq .accordionfaqheader.selected
+{
+	background-color: transparent;
+}
+#accordion1.lightnessfaq.rtl.arrow .accordionfaqheader:hover span.accordionfaqicon
+{
+	/* background-image: url(../images/collapsed-black-l.gif); */
+}
+#accordion1.lightnessfaq.arrow .accordionfaqheader:hover span.accordionfaqicon
+{
+	/* background-image: url(../images/collapsed-black.gif); */
+}
+#accordion1.lightnessfaq.arrow .accordionfaqheader.selected span.accordionfaqicon,
+#accordion1.lightnessfaq.rtl.arrow .accordionfaqheader.selected span.accordionfaqicon
+{
+	/* background-image: url(../images/expanded-black.gif); */
+}
+#accordion1.lightnessfaq.defaulticon span.accordionfaqicon
+{
+	background-attachment: scroll;
+	/* background-image: url(../images/ui-icons_ef8c08_256x240.png); */
+	background-repeat: no-repeat;
+	background-position: -112px -192px;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+}
+#accordion1.lightnessfaq.rtl.defaulticon span.accordionfaqicon
+{
+	background-position: -144px -192px;
+}
+#accordion1.lightnessfaq.defaulticon .accordionfaqheader.selected span.accordionfaqicon
+{
+	background-position: -128px -192px;
+}
+

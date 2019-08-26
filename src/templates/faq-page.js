@@ -3,13 +3,29 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
-import $ from "jquery";
-import '../components/accordionfaq.css';
+import { HTMLContent } from "../components/Content";
+// import jQuery from "jquery";
+import "../components/accordionfaq.css";
 
 export class FaqPageTemplate extends React.Component {
   constructor({ title, header, path, qa, contentComponent }) {
     super({ title, header, path, qa, contentComponent });
+
+    this.state = {
+      preparefaq: null,
+      bookmarkscroll: null,
+      selectedQuestion: -1
+    };
+  }
+
+  selectQuestion(index) {
+    console.log(index);
+    this.setState({
+      selectedQuestion: index
+    });
+  }
+
+  componentDidMount() {
   }
 
   render() {
@@ -44,8 +60,9 @@ export class FaqPageTemplate extends React.Component {
                 return (
                   <React.Fragment key={i}>
                     <h3
-                      className="accordionfaqheader accordion1"
+                      className={"accordionfaqheader accordion1 " + (this.state.selectedQuestion === i? 'selected' : '')}
                       id={"accordion" + i + 10}
+                      onClick={() => this.selectQuestion(i)}
                     >
                       <span className="accordionfaqicon"></span>
                       <span className="autonumber">{i + 1}.</span>
@@ -53,7 +70,9 @@ export class FaqPageTemplate extends React.Component {
                         <a>{question}</a>
                       </span>
                     </h3>
-                    <div className="accordionfaqitem">
+                    <div className="accordionfaqitem" style={{
+                      display: (this.state.selectedQuestion === i? 'block' : 'none')
+                    }}>
                       <PageContent content={answer} />
                     </div>
                   </React.Fragment>
