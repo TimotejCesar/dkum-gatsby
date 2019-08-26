@@ -6,6 +6,7 @@ import um_logo_en from "../img/logotip_um2_eng.png";
 import looking_glass from "../img/gosearch15.png";
 import { FormattedMessage, intlShape, injectIntl } from "react-intl";
 import TextSizer from "../components/TextSizer";
+import axios from 'axios';
 
 class Header extends React.Component {
   constructor({ intl }) {
@@ -67,6 +68,25 @@ class Header extends React.Component {
         { value: "c50300", label: "    Univerzitetna knjižnica Maribor" }
       ]
     };
+  }
+
+  componentDidMount = function(){
+    axios.get("https://dk.um.si/ajax.php?cmd=getSearch&mode=cors")
+    .then(
+      res => {
+        console.log(res);
+        var opts = [];
+        if (res.listItems.length < 1) return;
+
+        for (let i = 0; i < res.listItems.length; i++) {
+          const el = res.listItems[i];
+          opts.push({value: el[0], label: el[1]});
+        }
+        this.setState({
+          dropdownOptions: opts
+        });
+      }
+    )
   }
 
   /**
