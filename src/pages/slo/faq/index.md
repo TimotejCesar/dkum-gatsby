@@ -3,7 +3,7 @@ templateKey: faq-page
 title: FAQ
 header: Pogosto zastavljena vprašanja
 qa:
-  - answer: "V DKUM se prijavite z\_[digitalno identiteto UM](http://rcum.um.si/programska-oprema/studenti/Strani/Upravljanje-identitet.aspx), sledite navodilom na omenjeni povezavi."
+  - answer: "V DKUM se prijavite z\_<a href=\"http://rcum.um.si/programska-oprema/studenti/Strani/Upravljanje-identitet.aspx\">digitalno identiteto UM</a>, sledite navodilom na omenjeni povezavi."
     question: Pozabil/a sem geslo za prijavo v AIPS.
   - answer: >-
       UDK dobite samo v knjižnici vaše fakultete. Na spletnih straneh vaše
@@ -51,12 +51,12 @@ qa:
       novo datoteko, potem ponovno sprožite izdelano poročila. Poročilo se
       zbriše tudi po objavi zaključenga dela.
     question: >-
-      Povezava za ogled poročila detektorja podobnih vsebin
-      izpiše, da poročilo ni več dosegljivo!
+      Povezava za ogled poročila detektorja podobnih vsebin izpiše, da poročilo
+      ni več dosegljivo!
   - answer: "Takšen odstotek ne obstaja. Odstotek pove samo, koliko besedila nekega dela je podobnega z besedilom drugega dela. Poglejmo si nekaj primerov, zakaj takšnega odstotka ni mogoče določiti:\r\n\r\n*   recimo, da imamo dokument, ki ima 10% podobnost z drugim. Če naš dokument zajema 20 strani, potem sta podobni največ dve strani. Če naš dokument zajema 200 strani, potem je podobnih kar 20 strani. V drugem primeru je precej bolj verjetno, da bi lahko šlo za plagiat kot v prvem primeru, čeprav je odstotek enak;\r\n*   recimo, da naše delo zajema 100 strani popolnoma izvirnega besedila, v katerem izjavimo, da je slavna enačba E=mc<sup>2</sup> naše delo. Odstotek podobnosti je skoraj 0%, ampak gre za krajo ideje, kar je plagiat. Na drugi strani lahko imamo delo npr. s področja prava, kjer komentiramo določen zakon. Dokument je lahko 50% podoben, a ne gre za plagiat (če je pravilno citiran);\r\n*   pomembno je tudi, kako so podobnosti porazdeljene. Delo z 10% podrobnostjo lahko ima to podobnost v nekaj nepovezanih povedih, ki so na različnih lokacijah v dokumentu ali pa gre za en sam odsek besedila na eni lokaciji. V drugem primeru je večja verjetnost za plagiat (ali manjkajoči citat), čeprav je odstotek enak.\r\n\r\nOdstotek podobnosti je le vrednost, namenjena urejanju seznama podobnih del po podobnosti, da so najbolj podobna dela na vrhu seznama. Presoja, ali gre za plagiat ali ne, je še vedno na strani ljudi, npr. študenta in mentorja. Detektor zato omogoča interaktivni vpogled v poročilo, kjer lahko za najbolj podobne dokumente hitro in enostavno preverite, katere so podobne vsebine in kako so porazdeljene. Na podlagi tega se lahko odločite, ali gre morda za naključne podobnosti, manjkajoči citat ali pa gre za besedilo, zaradi katerega bi lahko prišlo do obtožb o plagiatorstvu."
     question: >-
-      Detektor podobnih vsebin izpisuje odstotke podobnosti.
-      Za katere odstotke se smatra, da je delo plagiat?
+      Detektor podobnih vsebin izpisuje odstotke podobnosti. Za katere odstotke
+      se smatra, da je delo plagiat?
   - answer: >-
       Na e-pošto se odgovarja v času delovnih dni med 8. in 14. uro. Med vikendi
       in prazniki se na e-pošto ne odgovarja.
